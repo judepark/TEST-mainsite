@@ -1,0 +1,46 @@
+{
+  "name": "max-mckinney-gatsby",
+  "description": "Max McKinney's personal portfolio website built with Gatsby, React, and GraphQL.",
+  "version": "1.0.0",
+  "author": "Max McKinney <maxgames101@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.0.0",
+    "gatsby-image": "^2.0.25",
+    "gatsby-plugin-google-analytics": "^2.0.8",
+    "gatsby-plugin-layout": "^1.0.11",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-responsive-iframe": "^2.0.8",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-remark": "^2.1.19",
+    "gatsby-transformer-sharp": "^2.1.10",
+    "npm": "^6.3.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.2.2",
+    "react-masonry-component": "^6.2.1",
+    "styled-components": "^4.1.3",
+    "typeface-roboto": "0.0.54",
+    "typeface-source-sans-pro": "0.0.54"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MaxMcKinney/max-mckinney-gatsby"
+  }
+}
