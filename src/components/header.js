@@ -5,15 +5,6 @@ import {fadeIn} from '../animations/m-styled-animations'
 
 import logo from './../assets/img/max-white.png'
 
-import {FaLinkedin} from 'react-icons/fa'
-import {FaMedium} from 'react-icons/fa'
-import {Fa500px} from 'react-icons/fa'
-import {FaDribbble} from 'react-icons/fa'
-import {FaTwitter} from 'react-icons/fa'
-import {FaGithub} from 'react-icons/fa'
-import {IoIosCamera} from 'react-icons/io'
-
-const iconSize = 17;
 
 const Header = () => (
 	<Navmenu>
@@ -25,38 +16,7 @@ const Header = () => (
 			</Link>
 		</SiteLogoContainer>
 
-		<SiteSocial>
-			<li>
-				<a href="https://github.com/MaxMcKinney" target="_blank">
-					<FaGithub size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.linkedin.com/in/mckinneymax" target="_blank">
-					<FaLinkedin size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<a href="https://dribbble.com/MaxMcKinney" target="_blank">
-					<FaDribbble size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<a href="https://medium.com/@maxmckinney" target="_blank">
-					<FaMedium size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/timmaxmckinney" target="_blank">
-					<FaTwitter size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<Link to="/photography" target="_blank">
-					<IoIosCamera size={iconSize+6}/>
-				</Link>
-			</li>
-		</SiteSocial>
+
 	</Navmenu>
 )
 
@@ -73,41 +33,6 @@ const Navmenu = styled.div`
 	animation: ${fadeIn} 1.3s;
 `
 
-const SiteSocial = styled.ul`
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
-	list-style: none;
-	text-transform: uppercase;
-	font-size: 0.7rem;
-	font-weight: 500;
-	letter-spacing: 1px;
-	margin-right: 40px;
-	margin-left: 0px;
-	margin-bottom: 0px;
-	/*width: 100%;*/
-	li {
-		margin: 0;
-		padding: 0px 20px;
-		a {
-			font-size: 0.7rem;
-			font-weight: 500;
-			text-decoration: none;
-			color: white;
-			transition: all 0.6s;
-			&:hover {
-				opacity: 0.6;
-			}
-		}
-	}
-	@media(max-width: 1155px) {
-		margin-right: 0;
-	}
-	@media(max-width: 715px) {
-		display: none;
-	}
-`
 const SitePages = styled.ul`
 	display: flex;
 	flex-direction: row;

@@ -6,8 +6,8 @@ projectDate: "Dec 2017 - Dec 2018"
 projectAgency: "Dell"
 projectRole: "Developer"
 projectBrief: "Created initial prototype showing new functionality of the UWP framework. Acted as a lead developer resource for the Alienware development team and created one-off examples of new tech for the final app to utilize. Designed and animated the particle backgrounds used throughout the app."
-projectShortBrief: "Worked as a lead developer resource, as well as a UI/UX designer, on the new Alienware Command Center."
-themeColor: "#2b3a61"
+projectShortBrief: "Worked as a lead developer resource."
+themeColor: "#FFFFFF"
 accentColor: "#446cdd"
 image: "alienware-command-center-header.jpg"
 thumb: "alienware-command-center-thumb.jpg"
@@ -15,7 +15,7 @@ showLiveContent: false
 sortDate: "2017-12-01"
 ---
 
-When Alienware announced their new branding in 2018 they also wanted a new Command Center for their users to get the most of the new hardware. Command Center allows Alienware users to customize the performance of their machine and also customize the lighting of the rig and create complex configurations that adapt to various games/apps. With this new Command Center there was a chance to bring new functionality and update the existing functionality to the demands of the 21st century.
+When[I'm an inline-style link](https://www.google.com) Alienware announced their new branding in 2018 they also wanted a new Command Center for their users to get the most of the new hardware. Command Center allows Alienware users to customize the performance of their machine and also customize the lighting of the rig and create complex configurations that adapt to various games/apps. With this new Command Center there was a chance to bring new functionality and update the existing functionality to the demands of the 21st century.
 
 <div class="photo-grid-container">
 <div class="photo-grid">

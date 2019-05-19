@@ -47,7 +47,7 @@ const LiveContentInfo = styled.div`
 	}
 	a {
 		padding-bottom: 48px;
-		color: ${props => props.themeColor};
+		color: ${props => props.accentColor};
 		text-align: center;
 	}
 	a:hover {

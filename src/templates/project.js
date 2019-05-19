@@ -63,7 +63,7 @@ export default function Template({ data }) {
 const ProjectHeader = styled.div`
 	height: 800px;
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
 	position: relative;
 	padding: 0px 24px;
@@ -89,8 +89,10 @@ const ProjectHeader = styled.div`
 
 const ProjectPostTitle = styled.h1`
 	font-weight: 600;
-	text-align: center;
+	text-align: left;
 	font-size: 3.7rem;
+	background-color: white;
+	display:block;
 	z-index: 5;
 	animation: ${fadeInScaleDown} 1.5s ease-out;
 

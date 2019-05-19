@@ -8,11 +8,9 @@ const ProjectCard = (props) => {
 	<Link to={props.data.fields.slug}>
 		<ProjectCardContainer>
 			<Img className="project-card-image" fluid={props.data.frontmatter.image.childImageSharp.fluid} alt="Project Image"/>
-			<ProjectCardContent>
-				<h4>{props.data.frontmatter.title}</h4>
-				<p>{props.data.frontmatter.projectShortBrief}</p>
-				<ReadMore theme={props.data.frontmatter.accentColor}>Read more about it</ReadMore>
-			</ProjectCardContent>
+			<ReadMore theme={props.data.frontmatter.accentColor}><h4>{props.data.frontmatter.title}</h4><p>{props.data.frontmatter.projectShortBrief}</p></ReadMore>
+				
+				
 		</ProjectCardContainer>
 	</Link>
   )
@@ -21,34 +19,38 @@ const ProjectCard = (props) => {
 // TODO: Create a style component wrapper for the gatsby-image component
 
 const ProjectCardContainer = styled.div`
-	display: grid;
-    width: 100%;
-    background: #171717;
-    border-radius: 4px;
-	grid-template-columns: 40% 1fr;
-	overflow: hidden;
-	height: 300px;
-	.recent-project-content {
-		grid-column: 2;
-		padding: 40px 32px;
-		align-self: center;
-	}
+		display: grid;
+		width:100%;
+		grid-template-columns: [start] minmax(24px, 1fr) [center] minmax(auto, 1100px) [end] minmax(24px, 1fr);
+		& > * {
+			grid-column: center;
+		}
 	.project-card-image {
 		grid-column: 1;
 		padding: 0;
-		height: 100%;
+		height: 50px;
+		width: 50px;
 		object-fit: cover;
 		margin: 0;
+		border-radius: 4px;
+		align-self: center;
 	}
 	h4 {
+		font-size: calc( 10px + (15 - 10) * (100vw - 400px) / (1300 - 400) );
+		color: hsla(0, 0%, 0%, 0.80);
 		display: inline-block;
-		line-height: 32px;
+		line-height: 20px;
 		font-weight: 600;
+		margin-left: 0px;
 	}
 	p {
-		margin-top: 8px;
+		font-size: calc( 10px + (15 - 10) * (100vw - 400px) / (1300 - 400) );
+		color: hsla(0, 0%, 0%, 0.30);
+		display: inline-block;
+		line-height: 20px;
+		margin-left: 0px;
+		margin-top: 0px;
 		margin-bottom: 0px;
-		opacity: 0.70;
 	}
 	&:hover {
 		opacity: 1;
@@ -62,15 +64,11 @@ const ProjectCardContainer = styled.div`
 	}
 `;
 
-const ProjectCardContent = styled.div`
-	grid-column: 2;
-	padding: 40px 32px;
-	align-self: center;
-`;
-
 const ReadMore = styled.span`
-	margin-top: 8px;
+	margin-top: 0px;
 	font-weight: 500;
+	margin-left: 50px;
+	margin-bottom: 5px;
 	color: white;
 	display: inline-block;
 	opacity: 1;
