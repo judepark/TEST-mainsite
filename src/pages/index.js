@@ -7,7 +7,6 @@ import {fadeInDown} from './../animations/m-styled-animations'
 
 import {FaLinkedin} from 'react-icons/fa'
 import {FaMedium} from 'react-icons/fa'
-import {Fa500px} from 'react-icons/fa'
 import {FaDribbble} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
 import {FaGithub} from 'react-icons/fa'
@@ -133,21 +132,23 @@ const SiteSocial = styled.ul`
 	@media(max-width: 715px) {
 		margin-right: 0;
 	}
-`
+`;
+
 const PageGrid = styled.div`
 	display: grid;
 	grid-template-columns: [start] minmax(24px, 1fr) [center] minmax(auto, 1100px) [end] minmax(24px, 1fr);
 	& > * {
 		grid-column: center;
 	}
-`
+`;
+
 const PageGrid2 = styled.div`
 	display: grid;
 	grid-template-columns: [start] minmax(24px, 1fr) [center] minmax(auto, 1100px) [end] minmax(24px, 1fr);
 	& > * {
 		grid-column: center;
 	}
-`
+`;
 
 const HeaderTitle = styled.h1`
 	font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -235,7 +236,7 @@ query ProjectQuery {
 			  themeColor
 			  accentColor
 			  image {
-				childImageSharp {
+				childImageSharp{
 				  fluid(maxWidth: 900) {
 					...GatsbyImageSharpFluid
 				  }

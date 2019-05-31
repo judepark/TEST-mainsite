@@ -7,12 +7,9 @@ const ProjectCard = (props) => {
   return (
 	<Link to={props.data.fields.slug}>
 		<ProjectCardContainer>
-			<Img className="project-card-image" fluid={props.data.frontmatter.image.childImageSharp.fluid} alt="Project Image"/>
 			<ReadMore theme={props.data.frontmatter.accentColor}><h4>{props.data.frontmatter.title}</h4>
 			<br/>
 			<p>{props.data.frontmatter.projectShortBrief}</p></ReadMore>
-				
-				
 		</ProjectCardContainer>
 	</Link>
   )
@@ -79,7 +76,7 @@ const ReadMore = styled.span`
 	margin-top: 0px;
 	font-weight: 500;
 	margin-left: 50px;
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 	color: white;
 	display: inline-block;
 	opacity: 1;
