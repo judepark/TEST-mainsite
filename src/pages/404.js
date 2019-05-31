@@ -11,28 +11,42 @@ import {FaDribbble} from 'react-icons/fa'
 import {FaTwitter} from 'react-icons/fa'
 import {FaGithub} from 'react-icons/fa'
 import {IoIosCamera} from 'react-icons/io'
+import {FaEnvelope} from 'react-icons/fa'
 
-
-const iconSize = 25;
+const iconSize = 23;
 
 const NotFoundPage = () => (
   <ErrorPageGrid>
 
 		<HeaderTitle>
 			<strong>Jude Park</strong>
-			<hr style={{ marginBottom: '0em'}}></hr>
-			Interaction Designer
+			<br/>
+			User Experience Design + Researcher
 		</HeaderTitle>
+
+		<Line>
+		<hr style={{ marginBottom: '1em', maxWidth: '40%'}}></hr>
+		</Line>
 
 		<SiteSocial>
 			<li>
 				<a href="https://github.com/MaxMcKinney" target="_blank">
-					<FaGithub size={iconSize}/>
+					<FaEnvelope size={iconSize}/>
 				</a>
 			</li>
 			<li>
 				<a href="https://www.linkedin.com/in/mckinneymax" target="_blank">
 					<FaLinkedin size={iconSize}/>
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/timmaxmckinney" target="_blank">
+					<FaTwitter size={iconSize}/>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/MaxMcKinney" target="_blank">
+					<FaGithub size={iconSize}/>
 				</a>
 			</li>
 			<li>
@@ -43,11 +57,6 @@ const NotFoundPage = () => (
 			<li>
 				<a href="https://medium.com/@maxmckinney" target="_blank">
 					<FaMedium size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/timmaxmckinney" target="_blank">
-					<FaTwitter size={iconSize}/>
 				</a>
 			</li>
 			<li>
@@ -140,7 +149,7 @@ const MButton = styled(Link)`
 `;
 
 const HeaderTitle = styled.p`
-	font-family: 'Spectral', serif,	-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	font-size: calc( 17px + (22 - 17) * (100vw - 400px) / (1300 - 400) );
 	color: hsla(0, 0%, 0%, 0.80);
@@ -152,6 +161,10 @@ const HeaderTitle = styled.p`
 	@media(max-width: 425px) {
 		margin-top: 130px;
 	}
+`;
+
+const Line = styled.p`
+	animation: ${fadeInDown} 0.5s;
 `;
 
 const HeaderSubtitle = styled.h3`

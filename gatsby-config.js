@@ -1,8 +1,8 @@
 module.exports = {
 	siteMetadata: {
-		title: 'Max McKinney',
-		description: 'I’m a developer and designer with a focus in full-stack web technologies. I build cars on the side and take pictures.',
-		siteUrl: "https://maxmckinney.com"
+		title: 'Jude Park',
+		description: 'Jude Park is a UX + Inclusion Expert, Researcher of all things fair, and Graduate of Human Computer Interaction',
+		siteUrl: "https://judepark.com"
 	},
 	plugins: [
 		'gatsby-plugin-react-helmet',

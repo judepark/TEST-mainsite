@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 import styled from 'styled-components'
 import {fadeIn} from '../animations/m-styled-animations'
 
-import logo from './../assets/img/max-white.png'
+import logo from './../assets/img/logo.png'
 
 
 const Header = () => (
@@ -93,7 +93,7 @@ const SiteLogoContainer = styled.div`
     justify-content: flex-start;
     width: 100%;
 	flex-grow: 1;
-	padding: 20px 50px;
+	padding: 50px 0px 0px 0px;
 	@media (max-width: 1155px) {
 		padding: 0px;
 	}

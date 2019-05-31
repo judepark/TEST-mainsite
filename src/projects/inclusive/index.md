@@ -1,18 +1,18 @@
 ---
-title: "Mental Health"
-url: ""
-projectShortBrief: "Developed and designed the website and brand for Gearhead Forge, a personal side hobby turned business about building cars."
-projectClient: "Gearhead Forge"
-projectDate: "May 2016 - Jan 2017"
+title: "Inclusie"
+url: "http://gearheadforge.com/"
+projectClient: "Inclusive"
+projectDate: "May 2013 - Jan 2017"
 projectAgency: "Self"
 projectRole: "Web Dev / Design, Brand"
 projectBrief: "Gearhead Forge is a side hobby turned business that I started in 2016 with a few friends. I created the brand and the designs surrounding it. I also developed and designed the website. Gearhead Forge is a group of enthusiasts passionately keeping the flame of V8’s and hot rodding alive by building uniquely aggressive cars and forging a lifestyle."
+projectShortBrief: "Developed and designed the website and brand for Gearhead Forge, a personal side hobby turned business about building cars."
 themeColor: "#171614"
 accentColor: "#ffc107"
 image: "gearhead-forge-header.jpg"
 thumb: "gearhead-forge-thumb.jpg"
 showLiveContent: true
-sortDate: "2016-05-07"
+sortDate: "2016-04-07"
 ---
 
 The idea for Gearhead Forge came from the passion and desire to build unique vehicles and keep the flame of hot rodding alive! I designed the brand identity over a couple of weeks and after several logo iterations I landed on the blacksmith inspired logo meant to call attention to the 'forging' aspect of Gearhead Forge.

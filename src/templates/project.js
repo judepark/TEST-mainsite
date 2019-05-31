@@ -16,35 +16,79 @@ export default function Template({ data }) {
 		</Helmet>
 
 		<ProjectHeader themeColor={data.markdownRemark.frontmatter.themeColor}>
-			<Img style={{position: 'absolute', top: 0, left: 0, width: '100%', height: `100%`}} fluid={data.markdownRemark.frontmatter.image.childImageSharp.fluid}/>
+			<Img style={{position: 'static', top: 0, left: 0, width: '100%', height: `100%`}} fluid={data.markdownRemark.frontmatter.image.childImageSharp.fluid}/>
 			<ProjectPostTitle>{data.markdownRemark.frontmatter.title}</ProjectPostTitle>
 		</ProjectHeader>
 
 		<ProjectContentGrid>
+
 			<ProjectDetails>
 				<div>
-					<h4>Role</h4>
-					<p>{data.markdownRemark.frontmatter.projectRole}</p>
+					<ProjectDetailsTitle>
+					WHAT IT IS
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectWHATITIS}</h5>
 				</div>
 				<div>
-					<h4>Client</h4>
-					<p>{data.markdownRemark.frontmatter.projectClient}</p>
-				</div>
-				<div>
-					<h4>Agency</h4>
-					<p>{data.markdownRemark.frontmatter.projectAgency}</p>
-				</div>
-				<div>
-					<h4>Date</h4>
-					<p>{data.markdownRemark.frontmatter.projectDate}</p>
-				</div>
-				<div>
-					<h4>Brief</h4>
-					<p>{data.markdownRemark.frontmatter.projectBrief}</p>
+					<ProjectDetailsTitle>
+					WHAT IT'S BEST FOR
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectWHATITSBESTFOR}</h5>
 				</div>
 			</ProjectDetails>
 
-			<h4>Case Study</h4>
+			<ProjectDetails>
+				<div>
+					<ProjectDetailsTitle>
+					CLIENT
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectCLIENT}</h5>
+				</div>
+				<div>
+					<ProjectDetailsTitle>
+					PLATFORM
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectPLATFORM}</h5>
+				</div>
+				<div>
+					<ProjectDetailsTitle>
+					BUILD
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectBUILD}</h5>
+				</div>
+				<div>
+					<ProjectDetailsTitle>
+					LINKS
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectLINKS}</h5>
+				</div>
+			</ProjectDetails>
+
+
+
+			<ProjectDetails>
+				<div>
+					<ProjectDetailsTitle>
+					MY ROLE
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectROLE}</h5>
+				</div>
+				<div>
+					<ProjectDetailsTitle>
+					RESULTS
+					</ProjectDetailsTitle>
+					<h5>{data.markdownRemark.frontmatter.projectRESULTS}</h5>
+				</div>
+			</ProjectDetails>
+
+			<div>
+					<br />
+					<br />
+					<h2>Brief</h2>
+					<p>{data.markdownRemark.frontmatter.projectBrief}</p>
+			</div>
+
+			<h2>Case Study</h2>
 
 			<div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
 
@@ -61,15 +105,19 @@ export default function Template({ data }) {
 }
 
 const ProjectHeader = styled.div`
-	height: 800px;
+	height: 500px;
 	display: flex;
 	justify-content: left;
 	align-items: center;
 	position: relative;
 	padding: 0px 24px;
 
+
 	& img {
 		animation: ${fadeInDown} 1s;
+		text-align: right;
+		max-width:100%;
+		padding: 0px 0px 0px 0px;
 	}
 
 	&:after {
@@ -83,14 +131,19 @@ const ProjectHeader = styled.div`
 	}
 
 	@media (max-width: 715px) {
-		height: 430px;
+		height: 500px;
 	}
 `;
 
 const ProjectPostTitle = styled.h1`
-	font-weight: 600;
+	font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: calc( 40px + (45 - 40) * (100vw - 400px) / (1300 - 400) );
+	color: hsla(0, 0%, 0%, 0.80);
+	line-height: 1.35;
+	padding: 10px 15px 10px 15px;
+	font-weight: bold;
 	text-align: left;
-	font-size: 3.7rem;
 	background-color: white;
 	display:block;
 	z-index: 5;
@@ -119,26 +172,41 @@ const ProjectDetails = styled.div`
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 50px;
-	margin-top: 20px;
+	margin-bottom: -20px;
 	background: transparent;
 
 	div {
-		padding-right: 35px;
+		padding-right: 0px;
+		padding-bottom: 0px;
+		width: 50%;
 	}
 
 	@media(max-width: 1155px) {
 		padding: 0px;
-    	margin-bottom: 0px;
+    	margin-bottom: -20px;
 
 		div {
 			padding-right: 0px;
-			padding-bottom: 20px;
-			width: 49%;
+			padding-bottom: 0px;
+			width: 50%;
 		}
 		div:last-child {
-			width: 100%;
+			width: 50%;
 		}
+	}
+`;
+
+const ProjectDetailsTitle = styled.div`
+	font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: calc( 12px + (17 - 12) * (100vw - 400px) / (1300 - 400) );
+	color: hsla(0, 0%, 0%, 0.3);
+	line-height: 1.35;
+	font-weight: normal;
+	margin-bottom: 0px;
+	animation: ${fadeInDown} 0.5s;
+	@media(maxs-width: 425px) {
+		margin-top: 130px;
 	}
 `;
 
@@ -164,10 +232,14 @@ export const query = graphql`
 		markdownRemark(fields: { slug: { eq: $slug } }) {
 			frontmatter {
 				title
-				projectClient
-				projectDate
-				projectRole
-				projectAgency
+				projectWHATITIS
+				projectWHATITSBESTFOR
+				projectCLIENT
+				projectPLATFORM
+				projectBUILD
+				projectLINKS
+				projectROLE
+				projectRESULTS
 				projectBrief
 				themeColor
 				accentColor

@@ -1,8 +1,8 @@
 {
-  "name": "max-mckinney-gatsby",
-  "description": "Max McKinney's personal portfolio website built with Gatsby, React, and GraphQL.",
+  "name": "Jude",
+  "description": "The personal website of Jude Park, developed with with care.",
   "version": "1.0.0",
-  "author": "Max McKinney <maxgames101@gmail.com>",
+  "author": "Jude Park",
   "dependencies": {
     "gatsby": "^2.0.0",
     "gatsby-image": "^2.0.25",

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from 'styled-components'
 import ProjectCard from '../components/ProjectCard';
 
-import {fadeInUp} from './../animations/m-styled-animations'
+import {fadeInDown} from './../animations/m-styled-animations'
 
 import {FaLinkedin} from 'react-icons/fa'
 import {FaMedium} from 'react-icons/fa'
@@ -16,46 +16,50 @@ import {FaEnvelope} from 'react-icons/fa'
 
 import {Link} from 'gatsby'
 
-const iconSize = 25;
+const iconSize = 23;
 
 const IndexPage = ({data}) => (
   <React.Fragment>
 	  <PageGrid>
 		<HeaderTitle>
 			<strong>Jude Park</strong>
-			<hr style={{ marginBottom: '0em'}}></hr>
-			Interaction Designer
+			<br/>
+			User Experience Design + Researcher
 		</HeaderTitle>
 
+		<Line>
+		<hr></hr>
+		</Line>
+		
 		<SiteSocial>
 			<li>
-				<a href="https://github.com/MaxMcKinney" target="_blank">
+				<a href="mail:jude@judepark.com" target="_blank">
 					<FaEnvelope size={iconSize}/>
 				</a>
 			</li>
 			<li>
-				<a href="https://github.com/MaxMcKinney" target="_blank">
-					<FaGithub size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<a href="https://www.linkedin.com/in/mckinneymax" target="_blank">
+				<a href="https://www.linkedin.com/in/judepark/" target="_blank">
 					<FaLinkedin size={iconSize}/>
 				</a>
 			</li>
 			<li>
-				<a href="https://dribbble.com/MaxMcKinney" target="_blank">
+				<a href="https://twitter.com/judepark/" target="_blank">
+					<FaTwitter size={iconSize}/>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/judepark/" target="_blank">
+					<FaGithub size={iconSize}/>
+				</a>
+			</li>
+			<li>
+				<a href="https://dribbble.com/judepark/" target="_blank">
 					<FaDribbble size={iconSize}/>
 				</a>
 			</li>
 			<li>
-				<a href="https://medium.com/@maxmckinney" target="_blank">
+				<a href="https://medium.com/@judepark" target="_blank">
 					<FaMedium size={iconSize}/>
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/timmaxmckinney" target="_blank">
-					<FaTwitter size={iconSize}/>
 				</a>
 			</li>
 			<li>
@@ -67,15 +71,20 @@ const IndexPage = ({data}) => (
 
 		<HeaderSubtitle>
 			<br/>
-			UX & Interaction Designer /
+			UX + Inclusion Expert.
 			<br/>
-			Researcher of all things fair /
+			Researcher of all things fair.
 			<br/>
-			Pondering doodler /
+			Graduate of Human Computer Interaction.
 		</HeaderSubtitle>
 	</PageGrid>
 
 	<PageGrid2>
+
+	<PortfolioTitle>
+	PORTFOLIO
+	</PortfolioTitle>
+
 		<ProjectCardGrid>
 
 			{data.allMarkdownRemark.edges.map(({node}) => (
@@ -84,6 +93,7 @@ const IndexPage = ({data}) => (
 
 		</ProjectCardGrid>
 	</PageGrid2>
+	
   </React.Fragment>
 )
 
@@ -100,7 +110,8 @@ const SiteSocial = styled.ul`
 	margin-right: 40px;
 	margin-left: -20px;
 	margin-bottom: 0px;
-	animation: ${fadeInUp} .5s;
+	margin-top: -40px;
+	animation: ${fadeInDown} .5s;
 	/*width: 100%;*/
 	li {
 		margin: 0;
@@ -139,16 +150,42 @@ const PageGrid2 = styled.div`
 `
 
 const HeaderTitle = styled.h1`
-	font-family: 'Spectral', serif,	-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: calc( 17px + (22 - 17) * (100vw - 400px) / (1300 - 400) );
+	font-size: calc( 19px + (25 - 19) * (100vw - 400px) / (1300 - 400) );
 	color: hsla(0, 0%, 0%, 0.80);
 	line-height: 1.35;
 	font-weight: normal;
 	margin-bottom: 20px;
-	max-width: 400px;
+	max-width: 800px;
 	margin-top: 190px;
 	@media(max-width: 425px) {
+		margin-top: 130px;
+	}
+`;
+
+const Line = styled.p`
+	animation: ${fadeInDown} 0.5s;
+	marginBottom: 1em;
+	width: 40%;
+	@media(max-width: 1155px) {
+		width: 100%;
+	}
+	@media(max-width: 715px) {
+		width: 100%;
+	}
+`;
+
+const PortfolioTitle = styled.p`
+	margin-bottom: 50px;
+	font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: calc( 12px + (17 - 12) * (100vw - 400px) / (1300 - 400) );
+	color: hsla(0, 0%, 0%, 0.3);
+	line-height: 1.35;
+	font-weight: normal;
+	animation: ${fadeInDown} 0.5s;
+	@media(maxs-width: 425px) {
 		margin-top: 130px;
 	}
 `;
@@ -156,15 +193,15 @@ const HeaderTitle = styled.h1`
 const HeaderSubtitle = styled.h3`
 	margin-bottom: 170px;
 	max-width: 350px;
-	font-family: 'Spectral', serif,	-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	font-family: 'Crimson Text', serif,	-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
 	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: calc( 17px + (22 - 17) * (100vw - 400px) / (1300 - 400) );
+	font-size: calc( 19px + (25 - 19) * (100vw - 400px) / (1300 - 400) );
 	color: hsla(0, 0%, 0%, 0.3);
 	letter-spacing: -.02em;
 	line-height: 1.35;
 	font-weight: normal;
 	max-width: 400px;
-	animation: ${fadeInUp} 0.5s;
+	animation: ${fadeInDown} 0.5s;
 	@media(max-width: 425px) {
 		margin-top: 130px;
 	}
@@ -172,9 +209,10 @@ const HeaderSubtitle = styled.h3`
 
 const ProjectCardGrid = styled.div`
 	display: grid;
+	width: 100%;
 	grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
 	grid-gap: 40px;
-	animation: ${fadeInUp} 1s;
+	animation: ${fadeInDown} 1s;
 	@media (max-width: 500px) {
 		grid-template-columns: 1fr;
 	}

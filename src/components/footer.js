@@ -1,17 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import {fadeIn} from '../animations/m-styled-animations'
+import {fadeInUp} from '../animations/m-styled-animations'
 
 const Footer = () => {
   return (
 	<PageFooter>
 		<div>
       <br />
-			<hr style={{ marginBottom: '0em'}}></hr>
       <footer>
        © {new Date().getFullYear()} Jude Park
        <br />
-        {` `}
+				{` `}
         </footer>
         </div>
 
@@ -21,6 +20,10 @@ const Footer = () => {
 
 const PageFooter = styled.div`
 	display: flex;
+	font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+	Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: calc( 17px + (22 - 17) * (100vw - 400px) / (1300 - 400) );
+	color: hsla(0, 0%, 0%, 0.80);
   padding: 0px 20px;
   margin: 0 auto;
 	margin-top: 100px;
@@ -28,7 +31,7 @@ const PageFooter = styled.div`
   flex-direction: row;
   align-items: flex-end;
 	justify-content: flex-end;
-	animation: ${fadeIn} 1s;
+	animation: ${fadeInUp} 1s;
 
 	@media(max-width: 1155px) {
 		padding: 0 24px;
@@ -43,7 +46,5 @@ const PageFooter = styled.div`
 	}
 
 `;
-
-
 
 export default Footer;

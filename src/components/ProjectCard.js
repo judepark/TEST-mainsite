@@ -8,7 +8,9 @@ const ProjectCard = (props) => {
 	<Link to={props.data.fields.slug}>
 		<ProjectCardContainer>
 			<Img className="project-card-image" fluid={props.data.frontmatter.image.childImageSharp.fluid} alt="Project Image"/>
-			<ReadMore theme={props.data.frontmatter.accentColor}><h4>{props.data.frontmatter.title}</h4><p>{props.data.frontmatter.projectShortBrief}</p></ReadMore>
+			<ReadMore theme={props.data.frontmatter.accentColor}><h4>{props.data.frontmatter.title}</h4>
+			<br/>
+			<p>{props.data.frontmatter.projectShortBrief}</p></ReadMore>
 				
 				
 		</ProjectCardContainer>
@@ -28,26 +30,35 @@ const ProjectCardContainer = styled.div`
 	.project-card-image {
 		grid-column: 1;
 		padding: 0;
-		height: 50px;
-		width: 50px;
+		height: 55px;
+		width: 55px;
 		object-fit: cover;
 		margin: 0;
 		border-radius: 4px;
 		align-self: center;
 	}
 	h4 {
-		font-size: calc( 10px + (15 - 10) * (100vw - 400px) / (1300 - 400) );
+		font-family: 'Product Sans', sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+		font-size: calc( 19px + (25 - 19) * (100vw - 400px) / (1300 - 400) );
 		color: hsla(0, 0%, 0%, 0.80);
 		display: inline-block;
-		line-height: 20px;
-		font-weight: 600;
+		line-height: 1.35;
+		font-weight: normal;
 		margin-left: 0px;
+		margin-top: 5px;
+		margin-bottom: 0px;
+		font-weight:normal;
 	}
+
 	p {
-		font-size: calc( 10px + (15 - 10) * (100vw - 400px) / (1300 - 400) );
+		font-family: 'Crimson Text', serif,	-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+		font-size: calc( 19px + (25 - 19) * (100vw - 400px) / (1300 - 400) );
+		letter-spacing: -.02em;
 		color: hsla(0, 0%, 0%, 0.30);
 		display: inline-block;
-		line-height: 20px;
+		line-height: 1.35;
 		margin-left: 0px;
 		margin-top: 0px;
 		margin-bottom: 0px;
@@ -72,7 +83,6 @@ const ReadMore = styled.span`
 	color: white;
 	display: inline-block;
 	opacity: 1;
-	border-bottom: 1px solid #cecece;
 	position: relative;
 	transition: opacity 0.3s;
 	--accent-color: ${props => props.theme};
@@ -82,9 +92,10 @@ const ReadMore = styled.span`
 		background: var(--accent-color);
 		left: 0;
 		right: 100%;
-		bottom: -1px;
-		height: 1px;
+		bottom: -5px;
+		height: 1.5px;
 		transition: all 0.3s;
+		max-width: 100%;
 	}
 `;
 
